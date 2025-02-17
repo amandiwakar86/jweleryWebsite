@@ -43,7 +43,6 @@ const trendingProducts = [
     { name: "Luxury Necklace", price: "\u20B9" + "30,999", image: "./jwelry-website/assets/images/trend3.jpg" },
     { name: "Silver Earrings", price: "\u20B9" + "3,999", image: "./jwelry-website/assets/images/trend4.jpg" }
 ];
-
 // Function to display trending products
 function displayTrendingProducts() {
     const container = document.getElementById("products-container");
@@ -63,12 +62,10 @@ function displayTrendingProducts() {
         container.appendChild(productDiv);
     });
 }
-
 // Function to handle "Buy Now"
 function buyNow(index) {
     const selectedProduct = trendingProducts[index];
     alert(`You selected: ${selectedProduct.name} for ${selectedProduct.price}`);
-
     // Redirect to checkout page with product details
     window.location.href = `./jwelry-website/pages/checkout.php?name=${encodeURIComponent(selectedProduct.name)}&price=${encodeURIComponent(selectedProduct.price)}&image=${encodeURIComponent(selectedProduct.image)}`;
 }
@@ -119,7 +116,6 @@ function displayCheckoutProduct() {
 
 // // Call the function when the checkout page loads
 document.addEventListener("DOMContentLoaded", displayCheckoutProduct);
-
 // --------------------------------------------------------------------------------------------
 // List of daily offer products
 const dailyOffers = [

@@ -132,30 +132,23 @@
         </div>
     </section>
 
-    <!-- Products Slider -->
-
-
     <!-- New Collection -->
     <section class="new-collection-section">
-        <div class="new-collection-box" data-aos="fade-up"
-     data-aos-duration="3000">
+        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
             <a href="./jwelry-website/pages/checkout.php?product_id=1"> <img
                     src="./jwelry-website/assets/images/newCollection1.jpg" alt=""></a>
         </div>
-        <div class="new-collection-box" data-aos="fade-up"
-     data-aos-duration="3000">
+        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
             <a href="./jwelry-website/pages/checkout.php?product_id=1">
                 <img src="./jwelry-website/assets/images/newCollection2.jpg" alt="">
             </a>
         </div>
-        <div class="new-collection-box" data-aos="fade-up"
-     data-aos-duration="3000">
+        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
             <a href="./jwelry-website/pages/checkout.php?product_id=1">
                 <img src="./jwelry-website/assets/images/newCollection3.jpg" alt="">
             </a>
         </div>
-        <div class="new-collection-box" data-aos="fade-up"
-     data-aos-duration="3000">
+        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
             <a href="./jwelry-website/pages/checkout.php?product_id=1">
                 <img src="./jwelry-website/assets/images/newCollection3.jpg" alt="">
             </a>
@@ -193,27 +186,21 @@
             <p>Join our satisfied customers who trust us for their silver jewelry needs.</p>
             <div class="grid">
                 <!-- Customer 1 -->
-                <div class="customer-card" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+                <div class="customer-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <img src="./jwelry-website/assets/images/Customer1.jpg" alt="Customer 1">
                     <p>"Absolutely love my new silver necklace! Great quality and fast delivery."</p>
                     <h4>- Elon Musk</h4>
                 </div>
 
                 <!-- Customer 2 -->
-                <div class="customer-card" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+                <div class="customer-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <img src="./jwelry-website/assets/images/customer2.jpg" alt="Customer 2">
                     <p>"Amazing craftsmanship! I keep coming back for more silver jewelry."</p>
                     <h4>- Mukesh Ambani</h4>
                 </div>
 
                 <!-- Customer 3 -->
-                <div class="customer-card" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+                <div class="customer-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <img src="./jwelry-website/assets/images/customer3.jpg" alt="Customer 3">
                     <p>"Best customer service and stunning designs. Highly recommended!"</p>
                     <h4>- Gautam Adani</h4>
