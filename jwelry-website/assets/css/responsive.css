@@ -1,0 +1,587 @@
+/* @media (min-width: 240px) {
+    marquee {
+        font-size: 12px;
+    }
+    .header {
+        width: 100%;
+        height: 75px;
+    }
+
+    .navbar{
+        padding: 2px;
+    }
+    .logo {
+        display: none;
+    }
+
+    .phone-menu {
+        display: block;
+    }
+    .search-Container {
+        height: 20px;
+        min-width: 100px;
+    }
+    .search-Container input{
+        width: 100%;
+        height: 16px;
+        font-size: 14px;
+    }
+    
+    .searcher-icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40px;
+    }
+
+    .nav-icons {
+        font-size: 18px;
+        width: 160px;
+    }
+    
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+    .hamburger{
+        height: 30px;
+        width: 30px;
+    }
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .nav-links .menu {
+        display: none;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+} */
+@media (min-width: 320px) and (max-width: 479px) {
+    marquee {
+        font-size: 12px;
+    }
+
+    .header {
+        width: 100%;
+        height: 75px;
+    }
+
+    /* .navbar {
+        padding: 2px;
+    } */
+
+    .navbar {
+        height: 40px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .phone-menu {
+        display: block;
+    }
+
+    .phone-menu .menu {
+        width: 100%;
+    }
+
+    .search-Container {
+        height: 20px;
+        min-width: 100px;
+    }
+
+    /* .search-Container input {
+        width: 100%;
+        height: 16px;
+        font-size: 14px;
+    }
+
+    .searcher-icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40px;
+    } */
+
+
+    .login_btn {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    #search-box {
+        margin: 5px auto;
+    }
+
+    .nav-icons {
+        font-size: 18px;
+        width: 160px;
+        gap: 6px;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+    .hamburger {
+        height: 30px;
+        width: 30px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .nav-links .menu {
+        display: none;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+
+    /* hero */
+    .hero-section {
+        height: 200px;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .hero-section .hero-background-image img {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .hero-text {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        z-index: 1;
+        /* justify-content: right; */
+        /* align-items: flex-end; */
+        top: 30%;
+        gap: 10px;
+    }
+
+    .hero-section .hero-text .line {
+        gap: 2px;
+        width: 100px;
+        border-bottom: 2px solid black;
+    }
+
+    .hero-section .hero-text p {
+        font-size: 15px;
+        color: rgb(16, 17, 17);
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .hero-text button {
+        padding: 2px 5px;
+
+    }
+
+    .new-collection-section {
+        height: 200px;
+    }
+
+    .new-collection-section .new-collection-box img {
+        width: 155px;
+        height: 80px;
+    }
+
+    .trending-section {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    .products-container {
+        height: 200px;
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        overflow: scroll;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .products-container::-webkit-scrollbar {
+        visibility: hidden;
+    }
+
+    .product {
+        padding: 1px;
+        width: 100px;
+        height: 170px;
+    }
+
+    .product h3 {
+        font-size: 12px;
+    }
+
+    .product img {
+        width: 90px;
+    }
+
+    .product button {
+        padding: 2px;
+    }
+
+    #product-container.products-container {
+        height: 130px;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .store-location iframe {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Offer Banner Styles */
+
+    .offer-banner-section {
+        height: 130px;
+
+    }
+
+
+    .offer-banner {
+        width: 350px;
+        height: 120px;
+    }
+
+
+    /* Offer Image */
+    .offer-banner img {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .offer-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .offer-banner #offer-price {
+        font-size: 18px;
+    }
+
+    .offer-details .offer-text {
+        font-size: 12px;
+    }
+    .store-location ifram{
+        width: 80%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    marquee {
+        font-size: 12px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .phone-menu {
+        display: block;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .searcher-icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40px;
+    }
+
+    .menu-item a {
+        font-size: 20px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .nav-links .menu {
+        display: none;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+    /* hero */
+    .hero-section {
+        height: 200px;
+    }
+
+    .hero-section .hero-background-image img {
+        width: 150px;
+    }
+
+
+    .hero-text {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-section .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .hero-section .hero-text button {
+        padding: 7px 10px;
+
+    }
+
+    .new-collection-section .new-collection-box img {
+        width: 200px;
+        height: 130px;
+    }
+
+    .trending-section {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    .products-container {
+        height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        padding: 1px;
+        width: 100px;
+        height: 170px;
+    }
+
+    .product h3 {
+        font-size: 12px;
+    }
+
+    .product img {
+        width: 70px;
+    }
+
+    .product button {
+        padding: 2px;
+    }
+
+    #product-container.products-container {
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .nav-links .menu {
+        display: none;
+    }
+
+    #search-box {
+        margin: 10px auto;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+    /* hero */
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-section .hero-background-image img {
+        width: 200px;
+    }
+
+    .hero-text {
+        width: 400px;
+        height: 200px;
+    }
+
+    .hero-section .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .new-collection-section {
+        width: 100%;
+        height: 200px;
+    }
+
+    .new-collection-section .new-collection-box img {
+        width: 170px;
+        height: 135px;
+    }
+
+    .trending-section {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    .products-container {
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .product {
+        padding: 5px;
+        width: 170px;
+        height: 290px;
+    }
+
+    .product button {
+        padding: 2px;
+    }
+
+
+
+}
