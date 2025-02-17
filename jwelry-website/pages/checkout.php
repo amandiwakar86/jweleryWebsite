@@ -12,8 +12,14 @@
 
 <body>
     <div class="checkout-container">
-        <h2>Checkout</h2>
         <form id="checkoutForm" action="process_order.php" method="POST">
+            <div class="order_summary">
+                <!-- Order Summary -->
+                <h3>Order Summary</h3>
+                <div id="orderSummary">
+                    <p>Loading product details...</p>
+                </div>
+            </div>
             <div class="fields">
                 <!-- Customer Details -->
                 <h3>Billing Details</h3>
@@ -27,13 +33,7 @@
                 <input type="tel" name="phone" required>
             </div>
 
-            <div class="order_summary">
-                <!-- Order Summary -->
-                <h3>Order Summary</h3>
-                <div id="orderSummary">
-                    <p>Loading product details...</p>
-                </div>
-            </div>
+           
             <div class="payment_method">
                 <!-- Payment -->
                 <h3>Payment Method</h3>
