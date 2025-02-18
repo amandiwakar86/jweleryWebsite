@@ -26,7 +26,7 @@
             Sparkle & Save! Extra 10% OFF on Prepaid Orders - Use Code: SILVER10
         </marquee>
         <div class="navbar">
-            <div class="logo">Jewellery</div>
+            <div class="logo">Sinjhini.com</div>
             <!-- <div class="logo"><img src="#" alt="Logo"></div> -->
             <div class="phone-menu" id="menu">
                 <ul class="menu">
@@ -135,8 +135,9 @@
     <!-- New Collection -->
     <section class="new-collection-section">
         <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
-            <a href="./jwelry-website/pages/checkout.php?product_id=1"> <img
-                    src="./jwelry-website/assets/images/newCollection1.jpg" alt=""></a>
+            <a href="./jwelry-website/pages/checkout.php?product_id=1"> 
+                <img src="./jwelry-website/assets/images/newCollection1.jpg" alt="">
+            </a>
         </div>
         <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
             <a href="./jwelry-website/pages/checkout.php?product_id=1">
@@ -212,8 +213,7 @@
     <!-- Store center section -->
     <section id="our-store" class="store-section">
         <h2>Our Store</h2>
-        <p>Welcome to our premium silver jewelry store! Explore our collection of exquisite designs crafted with
-            perfection.</p>
+        <p>Welcome to our premium silver jewelry store! Explore our collection of exquisite designs crafted with perfection.</p>
 
         <div class="store-gallery">
             <img src="store1.jpg" alt="Store Interior">
@@ -231,6 +231,7 @@
                 allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
+
     <!-- FAQs section -->
     <div class="faq-container">
         <h2>Frequently Asked Questions (FAQs)</h2>
@@ -265,6 +266,7 @@
                 for precise measurements. If you need further assistance, feel free to contact us.</p>
         </div>
     </div>
+    
     <!-- Footer section -->
     <footer>
         <div class="footer-container">

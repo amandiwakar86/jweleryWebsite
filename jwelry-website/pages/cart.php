@@ -166,9 +166,7 @@
         <div class="footer-bottom">
             <p>&copy; 2025 Silver Elegance | All Rights Reserved</p>
         </div>
-    </footer>
-
-    
+    </footer>    
 </body>
 <!-- For scroll animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
