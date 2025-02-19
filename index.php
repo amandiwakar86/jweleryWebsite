@@ -316,7 +316,7 @@ if (!isset($_SESSION['user_id'])) {
                 <h3>Follow Us</h3>
                 <div class="social-icons">
                     <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/silverjewelry.agra/?utm_source=ig_web_button_share_sheet"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>

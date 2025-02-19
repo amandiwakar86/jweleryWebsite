@@ -77,7 +77,7 @@ p{
 
     //     if (userEmail) {
     //         // If user is already logged in, redirect to main page
-    //         window.location.href = "../../index.php";
+    //         window.location.href = "../../../index.php";
     //     } else {
     //         // Pre-fill the email if stored in cookies
     //         document.querySelector("input[name='email']").value = userEmail || "";
