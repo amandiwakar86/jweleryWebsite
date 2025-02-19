@@ -35,3 +35,13 @@
         button:hover {
             background: #218838;
         }
+
+        @media (max-width: 320px) {
+            .login-container {
+                padding: 10px;
+            }
+
+            form {
+                padding: 5px;
+            }
+        }
