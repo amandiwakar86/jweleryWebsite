@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", displayTrendingProducts);
 
 
 // FAQs section-----------------------------
+
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const parent = question.parentElement;
@@ -121,6 +122,8 @@ document.querySelectorAll('.faq-question').forEach(question => {
 // document.addEventListener("DOMContentLoaded", displayCheckoutProduct);
 // --------------------------------------------------------------------------------------------
 // List of daily offer products
+
+
 const dailyOffers = [
     { name: "Silver Bracelet", price: "\u20B9" + "1,299", image: "./jwelry-website/assets/images/offer1.jpg" },
     { name: "Luxury Necklace", price: "\u20B9" + "30,999", image: "./jwelry-website/assets/images/offer2.jpg" },
