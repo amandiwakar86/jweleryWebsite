@@ -65,6 +65,7 @@
         });
     </script>
 </body>
+<script src="../assets/js/script.js"></script>
 <!-- For scroll animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
