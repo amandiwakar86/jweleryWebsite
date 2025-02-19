@@ -101,21 +101,22 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
+// for checkout page
 
 // Function to update the checkout page dynamically
-function displayCheckoutProduct() {
-    const product = getQueryParams();
-    if (product.name && product.price && product.image) {
-        document.getElementById("checkout-name").textContent = product.name;
-        document.getElementById("checkout-price").textContent = product.price;
-        document.getElementById("checkout-image").src = product.image;
-    } else {
-        document.body.innerHTML = "<h2>No product selected!</h2>";
-    }
-}
+// function displayCheckoutProduct() {
+//     const product = getQueryParams();
+//     if (product.name && product.price && product.image) {
+//         document.getElementById("checkout-name").textContent = product.name;
+//         document.getElementById("checkout-price").textContent = product.price;
+//         document.getElementById("checkout-image").src = product.image;
+//     } else {
+//         document.body.innerHTML = "<h2>No product selected!</h2>";
+//     }
+// }
 
 // // Call the function when the checkout page loads
-document.addEventListener("DOMContentLoaded", displayCheckoutProduct);
+// document.addEventListener("DOMContentLoaded", displayCheckoutProduct);
 // --------------------------------------------------------------------------------------------
 // List of daily offer products
 const dailyOffers = [
