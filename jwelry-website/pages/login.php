@@ -18,6 +18,7 @@
             <input type="email" name="email" placeholder="Enter your email" required>
             <input type="password" name="password" placeholder="Enter your password" required>
             <input type="text" name="phone" placeholder="Enter your phone number" required>
+            <input type="text" name="address" placeholder="Enter your address " required>
             <button type="submit">Submit</button>
         </form>
         
