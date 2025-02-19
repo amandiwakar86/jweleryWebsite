@@ -58,8 +58,8 @@ marquee {
     background-color: rgb(31, 31, 117);
     color: #fff;
 }
-.logo{
-    font-size: 20px;
+.logo img{
+    width: 100px;
 }
 
 .hamburger {

@@ -148,7 +148,7 @@ function displayOfferBanner() {
 // Redirect user to checkout page when they click the offer banner
 function buyOfferProduct() {
     const offerProduct = selectDailyOffer();
-    window.location.href = `checkout.php?name=${encodeURIComponent(offerProduct.name)}&price=${encodeURIComponent(offerProduct.price)}&image=${encodeURIComponent(offerProduct.image)}`;
+    window.location.href = `../pages/ checkout.php?name=${encodeURIComponent(offerProduct.name)}&price=${encodeURIComponent(offerProduct.price)}&image=${encodeURIComponent(offerProduct.image)}`;
 }
 
 // Load the offer banner when the page loads

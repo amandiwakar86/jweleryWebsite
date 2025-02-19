@@ -33,8 +33,8 @@ if (!isset($_SESSION['user_id'])) {
             Sparkle & Save! Extra 10% OFF on Prepaid Orders - Use Code: SILVER10
         </marquee>
         <div class="navbar">
-            <div class="logo">Sinjhini.com</div>
-            <!-- <div class="logo"><img src="#" alt="Logo"></div> -->
+            <!-- <div class="logo">Sinjhini.com</div> -->
+            <div class="logo"><img src="./jwelry-website/assets/images/logo.jpg" alt="Logo"></div>
             <div class="phone-menu" id="menu">
                 <ul class="menu">
                     <li class="menu-item dropdown"><a href="#">Shop</a>
