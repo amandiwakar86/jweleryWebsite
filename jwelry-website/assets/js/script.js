@@ -81,15 +81,6 @@ document.addEventListener("DOMContentLoaded", displayTrendingProducts);
 //     image: "https://via.placeholder.com/200"
 // });
 
-// Function to get product details from the URL
-function getQueryParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-        name: params.get("name"),
-        price: params.get("price"),
-        image: params.get("image")
-    };
-}
 
 // FAQs section-----------------------------
 document.querySelectorAll('.faq-question').forEach(question => {
@@ -102,6 +93,17 @@ document.querySelectorAll('.faq-question').forEach(question => {
 });
 
 // for checkout page
+
+// Function to get product details from the URL
+// function getQueryParams() {
+//     const params = new URLSearchParams(window.location.search);
+//     return {
+//         name: params.get("name"),
+//         price: params.get("price"),
+//         image: params.get("image")
+//     };
+// }
+
 
 // Function to update the checkout page dynamically
 // function displayCheckoutProduct() {
