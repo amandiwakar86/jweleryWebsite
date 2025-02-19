@@ -124,7 +124,7 @@
                 <li><a href="./user/user_orders.php">Orders</a></li>
                 <li><a href="./user/wishlist.php">Wishlist</a></li>
                 <li><a href="#settings">Settings</a></li>
-                <li><a href="./user/logoout.php">Logout</a></li>
+                <li><a href="../php/logout.php">Logout</a></li>
             </ul>
         </nav>
         <main class="content">

@@ -20,6 +20,13 @@
 </head>
 
 <body>
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ./jwelry-website/pages/user/registration.php"); // Redirect to login if not logged in
+    exit();
+}
+?>
 
     <header class="header">
         <marquee behavior="scroll" direction="left" id="dynamicMarquee" scrollamount="5">
@@ -109,7 +116,7 @@
             <div class="nav-icons">
                 <a href="./jwelry-website/pages/userDashboard.php"> <i class="fa-solid fa-user"></i></a>
                 <a href="./jwelry-website/pages/cart.php"> <i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="./jwelry-website/pages/login.php" class="login_btn">Login</a>
+                <!-- <a href="./jwelry-website/pages/login.php" class="login_btn">Login</a> -->
                 <div class="hamburger" id="menu-toggle">
                     <span></span><span></span><span></span>
                 </div>
