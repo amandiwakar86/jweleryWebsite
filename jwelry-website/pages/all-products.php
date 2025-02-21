@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
     <!-- For AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>All Products shop</title>
-    
+
 </head>
 
 <body>
-<?php
+    <?php
 include '../includes/header.php'; 
 ?>
 
@@ -35,59 +35,9 @@ include '../includes/header.php';
     </div>
 
 
-    <!-- Footer section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>Silver Elegance</h2>
-                <p>Discover the finest silver jewelry with exquisite craftsmanship and timeless beauty.</p>
-            </div>
-
-            <div class="footer-section links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../../index.php">Home</a></li>
-                    <li><a href="./all-products.php">Shop</a></li>
-                    <li><a href="./about.php">About Us</a></li>
-                    <li><a href="./contact.php">Contact</a></li>
-                    <li><a href="./faqs.php">FAQs</a></li>
-                    <li><a href="../admin/index.php">Admin Panel</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-section support">
-                <h3>Customer Support</h3>
-                <ul>
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section newsletter">
-                <h3>Join Our Newsletter</h3>
-                <form>
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-
-            <div class="footer-section social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Silver Elegance | All Rights Reserved</p>
-        </div>
-    </footer>
-
+    <?php
+include '../includes/footer.php'; 
+?>
 </body>
 <script>
     function displayProducts() {
@@ -132,17 +82,17 @@ include '../includes/header.php';
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ product_id: productId })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) alert("Added to Wishlist!");
-            else alert("Failed to add.");
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) alert("Added to Wishlist!");
+                else alert("Failed to add.");
+            });
     }
 </script>
 <!-- For scroll animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 <!-- Main JS -->
 <script src="../assets/js/all-products.js"></script>

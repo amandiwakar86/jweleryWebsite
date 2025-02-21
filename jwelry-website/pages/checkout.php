@@ -53,7 +53,10 @@ include '../includes/header.php';
         </form>
     </div>
 
-    <script>
+<?php
+include '../includes/footer.php'; 
+?>
+<script>
         document.addEventListener("DOMContentLoaded", function () {
             let productID = new URLSearchParams(window.location.search).get('product_id');
 

@@ -54,6 +54,9 @@ include '../includes/header.php';
         </main>
     </div>
 
+    <?php
+include '../includes/footer.php'; 
+?>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const orders = ["Silver Ring - $50", "Silver Necklace - $120"];

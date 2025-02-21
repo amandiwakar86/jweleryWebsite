@@ -42,7 +42,12 @@ include '../includes/header.php';
         <h2>8. Contact Us</h2>
         <p>If you have any questions, please contact us at <a href="mailto:support@yourjewelrystore.com">support@yourjewelrystore.com</a>.</p>
     </div>
+
+    <?php
+include '../includes/footer.php'; 
+?>
 </body>
+
 <!-- For scroll animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
