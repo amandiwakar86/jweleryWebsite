@@ -1,3 +1,11 @@
+<?php
+session_start();
+session_destroy();
+header("Location: ./registration.php"); // Redirect to login page
+exit();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +51,7 @@
 <body>
     <div class="logout-container">
         <h2>Are you sure you want to logout?</h2>
-        <a href="../../php/logout.php" class="logout-btn">Logout</a>
+        <a href="logout.php" class="logout-btn">Logout</a>
     </div>
 </body>
 </html>

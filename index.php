@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ./jwelry-website/userAuthentication/registration.php"); // Redirect to login if not logged in
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,11 +28,6 @@
 
 <body>
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ./jwelry-website/pages/user/registration.php"); // Redirect to login if not logged in
-    exit();
-}
 include './jwelry-website/includes/header.php'; 
 ?>
 
