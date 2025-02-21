@@ -9,6 +9,11 @@
     <title>Terms and Conditions</title>
 </head>
 <body>
+
+<?php
+include '../includes/header.php'; 
+?>
+
     <div class="terms-container">
         <h1>Terms and Conditions</h1>
         <p>Welcome to [Your Jewelry Store Name]! These terms and conditions outline the rules and regulations for the use of our website.</p>

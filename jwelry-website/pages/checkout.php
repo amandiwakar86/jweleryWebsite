@@ -11,6 +11,10 @@
 </head>
 
 <body>
+<?php
+include '../includes/header.php'; 
+?>
+
     <div class="checkout-container">
         <form id="checkoutForm" action="process_order.php" method="POST">
             <div class="order_summary">

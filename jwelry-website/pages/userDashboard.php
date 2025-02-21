@@ -22,100 +22,10 @@
 </head>
 
 <body>
-    <!-- <header class="header">
-        <marquee behavior="scroll" direction="left" id="dynamicMarquee" scrollamount="5">
-            Sparkle & Save! Extra 10% OFF on Prepaid Orders - Use Code: SILVER10
-        </marquee>
-        <div class="navbar">
-            <div class="logo"><img src="#" alt="Logo"></div>
-            <div class="phone-menu" id="menu">
-                <ul class="menu">
-                    <li class="menu-item dropdown"><a href="#">Shop</a>
-                        <ul class="DropDownMenu1 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/all-products.html">All Jewellery</a></li>
-                            <li><a href="./jwelry-website/pages/earings.html">Earringss</a></li>
-                            <li><a href="./jwelry-website/pages/neckllaces.html">Necklaces</a></li>
-                            <li><a href="./jwelry-website/pages/braclets.html">Bracelets</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Collections</a>
-                        <ul class="DropDownMenu2 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/new_arriables.html">New Arrivals</a></li>
-                            <li><a href="./jwelry-website/pages/best_sallers.html">Best Sallers</a></li>
-                            <li><a href="./jwelry-website/pages/gift_ideas.html">Gift Ideas</a></li>
-                            <li><a href="./jwelry-website/pages/sessonal_fabourite.html">Seasonal Fabourite</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">About Us</a>
-                        <ul class="DropDownMenu3 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/our_story.html">Our Story</a></li>
-                            <li><a href="./jwelry-website/pages/our_story.html">Mission & Values</a></li>
-                            <li><a href="./jwelry-website/pages/team.html">Meat the Team</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Customer Care</a>
-                        <ul class="DropDownMenu4 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/contact.html">Contact Us</a></li>
-                            <li><a href="./jwelry-website/pages/faqs.html">FAQs</a></li>
-                            <li><a href="./jwelry-website/pages/Return_refund_policy.html">Return & Refound Policy</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="./jwelry-website/pages/blogs.html">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="nav-links">
-                <ul class="menu">
-                    <li class="menu-item dropdown"><a href="#">Shop <i class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu1 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/all-products.html">All Jewellery</a></li>
-                            <li><a href="./jwelry-website/pages/earings.html">Earringss</a></li>
-                            <li><a href="./jwelry-website/pages/neckllaces.html">Necklaces</a></li>
-                            <li><a href="./jwelry-website/pages/braclets.html">Bracelets</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Collections <i
-                                class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu2 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/new_arriables.html">New Arrivals</a></li>
-                            <li><a href="./jwelry-website/pages/best_sallers.html">Best Sallers</a></li>
-                            <li><a href="./jwelry-website/pages/gift_ideas.html">Gift Ideas</a></li>
-                            <li><a href="./jwelry-website/pages/sessonal_fabourite.html">Seasonal Fabourite</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">About Us <i class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu3 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/our_story.html">Our Story</a></li>
-                            <li><a href="./jwelry-website/pages/our_story.html">Mission & Values</a></li>
-                            <li><a href="./jwelry-website/pages/team.html">Meat the Team</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Customer Care <i
-                                class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu4 dropDownMenu">
-                            <li><a href="./jwelry-website/pages/contact.html">Contact Us</a></li>
-                            <li><a href="./jwelry-website/pages/faqs.html">FAQs</a></li>
-                            <li><a href="./jwelry-website/pages/Return_refund_policy.html">Return & Refound Policy</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="./jwelry-website/pages/blogs.html">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="searchBar">
-                <input type="text" id="search-box" placeholder="Search for products..."
-                    onkeypress="handleSearch(event)">
+<?php
+include '../includes/header.php'; 
+?>
 
-            </div>
-            <div class="nav-icons">
-                <a href="./jwelry-website/pages/userDashboard.html"> <i class="fa-solid fa-user"></i></a>
-                <a href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
-                <div class="hamburger" id="menu-toggle">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </header> -->
     <div class="dashboard">
         <nav class="sidebar">
             <h2>Silver Shop</h2>

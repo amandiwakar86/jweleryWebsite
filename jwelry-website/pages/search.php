@@ -24,100 +24,10 @@
     
 
 <body>
-    <header class="header">
-        <marquee behavior="scroll" direction="left" id="dynamicMarquee" scrollamount="5">
-            Sparkle & Save! Extra 10% OFF on Prepaid Orders - Use Code: SILVER10
-        </marquee>
-        <div class="navbar">
-            <div class="logo"><img src="#" alt="Logo"></div>
-            <div class="phone-menu" id="menu">
-                <ul class="menu">
-                    <li class="menu-item dropdown"><a href="#">Shop</a>
-                        <ul class="DropDownMenu1 dropDownMenu">
-                            <li><a href="./all-products.php">All Jewellery</a></li>
-                            <li><a href="./earings.php">Earringss</a></li>
-                            <li><a href="./neckllaces.php">Necklaces</a></li>
-                            <li><a href="./braclets.php">Bracelets</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Collections</a>
-                        <ul class="DropDownMenu2 dropDownMenu">
-                            <li><a href="./new_arriables.php">New Arrivals</a></li>
-                            <li><a href="./best_sallers.php">Best Sallers</a></li>
-                            <li><a href="./gift_ideas.php">Gift Ideas</a></li>
-                            <li><a href="./sessonal_fabourite.php">Seasonal Fabourite</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">About Us</a>
-                        <ul class="DropDownMenu3 dropDownMenu">
-                            <li><a href="./our_story.php">Our Story</a></li>
-                            <li><a href="./our_story.php">Mission & Values</a></li>
-                            <li><a href="./team.php">Meat the Team</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Customer Care</a>
-                        <ul class="DropDownMenu4 dropDownMenu">
-                            <li><a href="./contact.php">Contact Us</a></li>
-                            <li><a href="./faqs.php">FAQs</a></li>
-                            <li><a href="./Return_refund_policy.php">Return & Refound Policy</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="./blogs.php">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="nav-links">
-                <ul class="menu">
-                    <li class="menu-item dropdown"><a href="#">Shop <i class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu1 dropDownMenu">
-                            <li><a href="./all-products.php">All Jewellery</a></li>
-                            <li><a href="./earings.php">Earringss</a></li>
-                            <li><a href="./neckllaces.php">Necklaces</a></li>
-                            <li><a href="./braclets.php">Bracelets</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Collections <i
-                                class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu2 dropDownMenu">
-                            <li><a href="./new_arriables.php">New Arrivals</a></li>
-                            <li><a href="./best_sallers.php">Best Sallers</a></li>
-                            <li><a href="./gift_ideas.php">Gift Ideas</a></li>
-                            <li><a href="./sessonal_fabourite.php">Seasonal Fabourite</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">About Us <i class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu3 dropDownMenu">
-                            <li><a href="./our_story.php">Our Story</a></li>
-                            <li><a href="./our_story.php">Mission & Values</a></li>
-                            <li><a href="./team.php">Meat the Team</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="#">Customer Care <i
-                                class="fa-regular fa-greater-than"></i></a>
-                        <ul class="DropDownMenu4 dropDownMenu">
-                            <li><a href="./contact.php">Contact Us</a></li>
-                            <li><a href="./faqs.php">FAQs</a></li>
-                            <li><a href="./Return_refund_policy.php">Return & Refound Policy</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item dropdown"><a href="./blogs.php">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="searchBar">
-                <input type="text" id="search-box" placeholder="Search for products..."
-                    onkeypress="handleSearch(event)">
+<?php
+include '../includes/header.php'; 
+?>
 
-            </div>
-            <div class="nav-icons">
-                <a href="./userDashboard.php"> <i class="fa-solid fa-user"></i></a>
-                <a href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
-                <div class="hamburger" id="menu-toggle">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </header>
     <h2>Search Results for "<span id="search-query"></span>"</h2>
     <div id="search-results"></div>
 

@@ -21,6 +21,9 @@
     <title>Contact Us</title>
 </head>
 <body>
+<?php
+include '../includes/header.php';
+?>
     <div class="contact-container">
         <h2>Contact Us</h2>
         <form onsubmit="sendSMS(event)">
