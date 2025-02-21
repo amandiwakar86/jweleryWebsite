@@ -26,7 +26,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../../index.php">Home</a></li>
                     <li><a href="<?php echo $base_url; ?>pages/all-products.php">Shop</a></li>
                     <li><a href="<?php echo $base_url; ?>pages/about.php">About Us</a></li>
                     <li><a href="<?php echo $base_url; ?>pages/contact.php">Contact</a></li>
