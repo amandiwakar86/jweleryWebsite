@@ -1,108 +1,73 @@
+<?php
+include '../includes/config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $price = $_POST['price'];
+    $stock_quantity = $_POST['stock_quantity']; // Added stock quantity
+    $category_id = $_POST['category_id']; // Added category
+    $image = $_FILES['image']['name'];
+
+    $targetDir = "uploads/";
+    $targetFile = $targetDir . basename($image);
+
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
+        $conn = new mysqli("localhost", "root", "", "sinjhini_db");
+        
+        $sql = "INSERT INTO products (name, description, price, stock_quantity, category_id, image_url, created_at, updated_at) 
+                VALUES ('$name', '$description', '$price', '$stock_quantity', '$category_id', '$targetFile', NOW(), NOW())";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Product added successfully!";
+        } else {
+            echo "Error: " . $conn->error;
+        }
+
+        $conn->close();
+    } else {
+        echo "Failed to upload image.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product - Admin Panel</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-top: 10px;
-            font-weight: bold;
-            color: #555;
-        }
-        input, textarea, button {
-            margin-top: 5px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        textarea {
-            resize: vertical;
-            height: 80px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            margin-top: 15px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
+    <title>Add Product</title>
 </head>
 <body>
-    <div class="container">
-        <h2>Add Product</h2>
-        <form id="productForm">
-            <label>Product Image:</label>
-            <input type="file" id="productImage" accept="image/*" required>
-            <label>Product Name:</label>
-            <input type="text" id="productName" required>
-            <label>Price:</label>
-            <input type="number" id="productPrice" required>
-            <label>Description:</label>
-            <textarea id="productDescription" required></textarea>
-            <button type="submit">Add Product</button>
-        </form>
-    </div>
+    <h2>Add New Product</h2>
 
-    <script>
-        document.getElementById("productForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let productName = document.getElementById("productName").value;
-            let productPrice = document.getElementById("productPrice").value;
-            let productDescription = document.getElementById("productDescription").value;
-            let productImage = document.getElementById("productImage").files[0];
+    <form method="POST" enctype="multipart/form-data">
+        <label>Product Name:</label>
+        <input type="text" name="name" required><br><br>
 
-            if (productImage) {
-                let reader = new FileReader();
-                reader.onload = function(event) {
-                    let productData = {
-                        name: productName,
-                        price: productPrice,
-                        description: productDescription,
-                        image: event.target.result
-                    };
-                    let products = JSON.parse(localStorage.getItem("products")) || [];
-                    products.push(productData);
-                    localStorage.setItem("products", JSON.stringify(products));
+        <label>Description:</label>
+        <textarea name="description" required></textarea><br><br>
 
-                    alert("Product Added Successfully!");
-                    window.location.href = "../pages/all-products.php";
-                };
-                reader.readAsDataURL(productImage);
-            }
-        });
-    </script>
+        <label>Price (₹):</label>
+        <input type="number" name="price" step="0.01" required><br><br>
+
+        <label>Stock Quantity:</label>
+        <input type="number" name="stock_quantity" required><br><br>
+
+        <label>Category:</label>
+        <select name="category_id" required>
+            <option value="1">Rings</option>
+            <option value="2">Necklaces</option>
+            <option value="3">Bracelets</option>
+            <option value="4">Earrings</option>
+        </select><br><br>
+
+        <label>Product Image:</label>
+        <input type="file" name="image" accept="image/*" required><br><br>
+
+        <button type="submit">Add Product</button>
+    </form>
+
+    <br>
+    <a href="../pages/all-products.php">View Products</a>
 </body>
 </html>

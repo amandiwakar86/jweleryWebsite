@@ -221,7 +221,7 @@ marquee {
 
 .DropDownMenu1 {
     width: 150px;
-    height: 170px;
+    height: 360px;
 }
 
 .DropDownMenu2 {
@@ -551,9 +551,14 @@ marquee {
                     <li class="menu-item dropdown"><a href="#">Shop</a>
                         <ul class="DropDownMenu1 dropDownMenu">
                             <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
-                            <li><a href=<?php echo $base_url; ?>pages/earings.php">Earringss</a></li>
-                            <li><a href="<?php echo $base_url; ?>pages/neckllaces.php">Necklaces</a></li>
-                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Bracelets</a></li>
+                            <li><a href=<?php echo $base_url; ?>pages/earings.php">Rings</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/neckllaces.php">Bali & Earings</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Anklit</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Baby</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">lady Bralets</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Necklaces</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Chains</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Toerings</a></li>
                         </ul>
                     </li>
                     <li class="menu-item dropdown"><a href="#">Collections</a>
@@ -586,10 +591,15 @@ marquee {
                 <ul class="menu">
                     <li class="menu-item dropdown"><a href="#">Shop <i class="fa-regular fa-greater-than"></i></a>
                         <ul class="DropDownMenu1 dropDownMenu">
-                            <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
-                            <li><a href="<?php echo $base_url; ?>pages/earings.php">Earringss</a></li>
-                            <li><a href="<?php echo $base_url; ?>pages/neckllaces.php">Necklaces</a></li>
-                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Bracelets</a></li>
+                        <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
+                            <li><a href=<?php echo $base_url; ?>pages/earings.php">Rings</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/neckllaces.php">Bali & Earings</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Anklit</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Baby</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">lady Bralets</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Necklaces</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Chains</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/braclets.php">Toerings</a></li>
                         </ul>
                     </li>
                     <li class="menu-item dropdown"><a href="#">Collections <i

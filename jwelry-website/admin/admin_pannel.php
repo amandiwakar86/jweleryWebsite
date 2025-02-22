@@ -82,12 +82,11 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
     <div class="admin-container">
         <nav>
             <ul>
-                <li><a onclick="loadPage('dashboard.php')">Dashboard</a></li>
-                <li><a onclick="loadPage('delete_products.php')">Manage Products</a></li>
+                <li><a onclick="loadPage('add_products_Categories_page.php')">Add Products</a></li>
+                <li><a onclick="loadPage('delete_products.php')">Delete Products</a></li>
                 <li><a onclick="loadPage('orders.php')">Manage Orders</a></li>
                 <li><a onclick="loadPage('users.php')">Manage Users</a></li>
                 <li><a onclick="loadPage('logout.php')">Logout</a></li>
-                <li><a onclick="loadPage('add_products_Categories_page.php')">Add Products</a></li>
             </ul>
         </nav>
 
