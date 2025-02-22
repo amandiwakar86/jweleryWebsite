@@ -1,7 +1,6 @@
-<!-- logout.php - Logout Admin -->
 <?php
 session_start();
-session_destroy();
-header("Location: admin_login.php");
+session_destroy(); // Remove all session data
+header("Location: ./login.php"); // Redirect to login page
 exit();
 ?>
