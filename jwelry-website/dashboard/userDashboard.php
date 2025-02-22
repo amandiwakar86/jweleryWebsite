@@ -20,21 +20,29 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <title>User Dashboard</title>
 </head>
+<style>
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
 
+}
+</style>
 <body>
 <?php
 include '../includes/header.php'; 
 ?>
-
-    <div class="dashboard">
+<div class="dashboard">
         <nav class="sidebar">
             <h2>Silver Shop</h2>
             <ul>
-                <li><a href="./user/user-profile.php">Profile</a></li>
-                <li><a href="./user/user_orders.php">Orders</a></li>
-                <li><a href="./user/wishlist.php">Wishlist</a></li>
+                <li><a href="./user-profile.php">Profile</a></li>
+                <li><a href="./user_orders.php">Orders</a></li>
+                <li><a href="./wishlist.php">Wishlist</a></li>
                 <li><a href="#settings">Settings</a></li>
-                <li><a href="../php/logout.php">Logout</a></li>
+                <li><a href="../userAuthentication/logout.php">Logout</a></li>
             </ul>
         </nav>
         <main class="content">
@@ -52,8 +60,8 @@ include '../includes/header.php';
                 <ul id="wishlist-items"></ul>
             </section>
         </main>
-    </div>
-
+</div> 
+    
     <?php
 include '../includes/footer.php'; 
 ?>

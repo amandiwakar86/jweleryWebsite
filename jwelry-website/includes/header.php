@@ -625,7 +625,7 @@ marquee {
                     onkeypress="handleSearch(event)">
             </div>
             <div class="nav-icons">
-                <a href="<?php echo $base_url; ?>pages/userDashboard.php"> <i class="fa-solid fa-user"></i></a>
+                <a href="<?php echo $base_url; ?>dashboard/userDashboard.php"> <i class="fa-solid fa-user"></i></a>
                 <a href="<?php echo $base_url; ?>pages/cart.php"> <i class="fa-solid fa-cart-shopping"></i></a>
                 <!-- <a href="./jwelry-website/pages/login.php" class="login_btn">Login</a> -->
                 <div class="hamburger" id="menu-toggle">
