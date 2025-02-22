@@ -25,9 +25,13 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             text-align: center;
         }
         .admin-container {
-            width: 80%;
+            width:95%;
             margin: auto;
             padding: 20px;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
             background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -46,11 +50,16 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             cursor: pointer;
         }
         #content {
+            width: 90%;
             margin-top: 20px;
             padding: 20px;
             border: 1px solid #ddd;
             min-height: 400px;
             background: #f9f9f9;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
         }
         @media (max-width: 479px) {
             .admin-container {
@@ -82,7 +91,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
     <div class="admin-container">
         <nav>
             <ul>
-                <li><a onclick="loadPage('add_products_Categories_page.php')">Add Products</a></li>
+                <li><a href="./products.php">Add Products</a></li>
                 <li><a onclick="loadPage('delete_products.php')">Delete Products</a></li>
                 <li><a onclick="loadPage('orders.php')">Manage Orders</a></li>
                 <li><a onclick="loadPage('users.php')">Manage Users</a></li>

@@ -34,16 +34,21 @@ include '../includes/header.php';
 ?>
 
     <!-- All Products -->
-    <div>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-            <div style="border: 1px solid #ccc; padding: 10px; margin: 10px;">
-                <h3><?php echo $row['name']; ?></h3>
-                <p><?php echo $row['description']; ?></p>
-                <p>Price: ₹<?php echo $row['price']; ?></p>
-                <img src="<?php echo $row['image']; ?>" width="100" height="100" alt="Product Image">
-            </div>
-        <?php } ?>
-    </div>
+<div class="product-container">
+    <?php while ($row = $result->fetch_assoc()) { ?>
+        <div class="product-card">
+            <img src="<?php echo '/jwelry-website/admin/' . $row['image_url']; ?>" 
+                 onerror="this.onerror=null; this.src='/jwelry-website/admin/uploads/default.jpg';" 
+                 alt="Product Image">
+            <h3><?php echo htmlspecialchars($row['name']); ?></h3>
+            <p><?php echo htmlspecialchars($row['description']); ?></p>
+            <p class="product-price">Price: ₹<?php echo number_format($row['price'], 2); ?></p>
+        </div>
+    <?php } ?>
+</div>
+
+
+
     <?php
 include '../includes/footer.php'; 
 ?>
