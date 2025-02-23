@@ -7,87 +7,10 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    position: relative;
-    background-color: #fff;
 }
+
 
 /* hero section */
-
-.hero-section {
-    width: 100%;
-    height: 520px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #ede7e7;
-}
-
-.hero-background-image {
-    /* width: 420px; */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.hero-section .hero-background-image img {
-    width: 400px;
-    mix-blend-mode: multiply;
-}
-
-.hero-text {
-    width: 700px;
-    min-width: 300px;
-    height: 300px;
-    /* border: 2px solid black; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.hero-section .hero-text p {
-    font-size: 25px;
-    font-weight: bold;
-    color: #5f5d5d;
-}
-
-.hero-section .hero-text .line {
-    width: 250px;
-}
-
-.hero-section .hero-text .pera {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.hero-section .hero-text h1 {
-    font-size: 2.5rem;
-    /* font-family: "Finger Paint", serif;
-    font-weight: 400;
-    font-style: normal; */
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.hero-section .hero-text button {
-    padding: 7px 20px;
-    font-weight: bold;
-    border-radius: 4px;
-    border: 2px solid rgb(54, 53, 53);
-    color: rgb(54, 53, 53);
-}
-
-.hero-section .hero-text button:hover {
-    background-color: #dad6d6;
-}
-
-/*  For Products Slider */
 
 
 /* NEw Collection */
@@ -129,7 +52,7 @@ body {
 /* Trending Section */
 .trending-section {
     max-width: 100%;
-    margin: 40px auto;
+    /* margin: 40px auto; */
     padding: 20px;
     background: #fff;
     border-radius: 10px;

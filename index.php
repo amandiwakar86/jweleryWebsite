@@ -25,14 +25,183 @@ if (!isset($_SESSION['user_id'])) {
         href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+IN:wght@100..400&display=swap"
         rel="stylesheet">
 </head>
+<style>
+    /* Reset & General Styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+body {
+    overflow-x: hidden;
+} */
+.search-Container {
+        min-width: 300px;
+        background-color: white;
+        padding: 8px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+    }
+
+    /* Search Box Styling */
+    #search-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .search-Container {
+        border: 1px solid black;
+        border-radius: 50px;
+
+    }
+
+    .search-Container:hover {
+        border: 2px solid black;
+    }
+
+/* Hero Section */
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+/* Background Video */
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: #d4af37;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b8952a;
+}
+
+/* Video Control Button */
+#video-control {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#video-control:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.new-collection-section{
+    margin-top:510px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+</style>
 <body>
 <?php
 include './jwelry-website/includes/header.php'; 
 ?>
 
     <!-- Hero Sction -->
-    <section class="hero-section">
+
+    <section class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="./jwelry-website/assets/videos/video1.mp4.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Discover Timeless Elegance</h1>
+            <p>Handcrafted Silver Jewelry for Every Occasion</p>
+            <div class="searchBar">
+                <input type="text" id="search-box" placeholder="Search for products..."
+                    onkeypress="handleSearch(event)">
+            </div>
+            <a href="#shop" class="btn">Shop Now</a>
+        </div>
+
+        <button id="video-control" onclick="toggleVideo()">Pause</button>
+    </section>
+    <!-- <section class="hero-section">
         <div class="hero-background-image">
             <img src="./jwelry-website/assets/images/hero2.jpg" alt="" data-aos="fade-right">
         </div>
@@ -44,7 +213,8 @@ include './jwelry-website/includes/header.php';
             <h1>Classic Jewellery Collection</h1>
             <a href="./jwelry-website/pages/checkout.php?product_id=1" class="buy-now"><button>SHOP NOW</button></a>
         </div>
-    </section>
+    </section> -->
+
 
     <!-- New Collection -->
     <section class="new-collection-section">
@@ -194,4 +364,19 @@ include './jwelry-website/includes/footer.php';
   AOS.init();
 </script>
 
+<script>
+    const video = document.getElementById("hero-video");
+const controlButton = document.getElementById("video-control");
+
+function toggleVideo() {
+    if (video.paused) {
+        video.play();
+        controlButton.innerText = "Pause";
+    } else {
+        video.pause();
+        controlButton.innerText = "Play";
+    }
+}
+
+</script>
 </html>
