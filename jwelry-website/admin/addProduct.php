@@ -8,30 +8,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category_id = $_POST['category_id'];
     $image = $_FILES['image']['name'];
 
+    // Dynamically get the base URL
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
+    $host = $_SERVER['HTTP_HOST'];
+    $baseUrl = $protocol . $host . "/jweleryWebsite/jwelry-website/admin/";
+
     // Upload directory
-    $targetDir = "./uploads/";
-    if (!is_dir($targetDir)) {
-        mkdir($targetDir, 0777, true);
+    $targetDir = "uploads/";
+    $uploadPath = "../admin/" . $targetDir; // Corrected path for file upload
+
+    if (!is_dir($uploadPath)) {
+        mkdir($uploadPath, 0777, true);
     }
 
     $targetFile = $targetDir . basename($image);
-    
-    if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
+    $fullUploadPath = $uploadPath . basename($image);
+
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $fullUploadPath)) {
         $conn = new mysqli("localhost", "root", "", "sinjhini_db");
 
+        // Store full image URL
+        $imagePath = $baseUrl . $targetFile;
+
         $sql = "INSERT INTO products (name, price, stock_quantity, category_id, image_url, created_at) 
-                VALUES ('$name', '$price', '$stock_quantity', '$category_id', '$targetFile', NOW())";
+                VALUES ('$name', '$price', '$stock_quantity', '$category_id', '$imagePath', NOW())";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Product added successfully!";
-            header("Location: ./products.php"); // Redirect back
+            echo "<script>
+                    alert('Product added successfully!');
+                    window.location.href = '../pages/all-products.php';
+                  </script>";
         } else {
-            echo "Error: " . $conn->error;
+            echo "<script>alert('Error: " . $conn->error . "');</script>";
         }
 
         $conn->close();
     } else {
-        echo "Failed to upload image.";
+        echo "<script>alert('Failed to upload image.');</script>";
     }
 }
 ?>

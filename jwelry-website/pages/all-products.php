@@ -4,7 +4,15 @@ include '../includes/config.php'; // Include your database connection file
 $conn = new mysqli("localhost", "root", "", "sinjhini_db");
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
+
+// Dynamically get the base URL
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$baseUrl = $protocol . $host . "/jweleryWebsite/jwelry-website/admin/";
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,9 +45,9 @@ include '../includes/header.php';
 <div class="product-container">
     <?php while ($row = $result->fetch_assoc()) { ?>
         <div class="product-card">
-            <img src="<?php echo '/jwelry-website/admin/' . $row['image_url']; ?>" 
-                 onerror="this.onerror=null; this.src='/jwelry-website/admin/uploads/default.jpg';" 
-                 alt="Product Image">
+            <img src="<?php echo $baseUrl . 'uploads/' . basename($row['image_url']); ?>" 
+            onerror="this.onerror=null; this.src='<?php echo $baseUrl . 'uploads/default.jpg'; ?>';" 
+            alt="Product Image">
             <h3><?php echo htmlspecialchars($row['name']); ?></h3>
             <p><?php echo htmlspecialchars($row['description']); ?></p>
             <p class="product-price">Price: ₹<?php echo number_format($row['price'], 2); ?></p>

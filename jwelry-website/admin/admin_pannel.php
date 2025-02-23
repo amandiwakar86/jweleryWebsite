@@ -93,6 +93,9 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             <ul>
                 <li><a href="./products.php">Add Products</a></li>
                 <li><a onclick="loadPage('delete_products.php')">Delete Products</a></li>
+                <li><a onclick="loadPage('editProduct.php')">Edit Products</a></li>
+                <li><a onclick="loadPage('updateProduct.php')">Update Products</a></li>
+                <li><a onclick="loadPage('viewProducts.php')">View Products</a></li>
                 <li><a onclick="loadPage('orders.php')">Manage Orders</a></li>
                 <li><a onclick="loadPage('users.php')">Manage Users</a></li>
                 <li><a onclick="loadPage('logout.php')">Logout</a></li>
