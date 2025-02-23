@@ -23,12 +23,6 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
     <title>Header</title>
 </head>
 <style>
-    /* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    } */
-
     ul {
         list-style: none;
     }
@@ -74,9 +68,11 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         color: #fff;
     }
 
-    .logo img {
-        width: 100px;
-    }
+    .logo {
+        color:#c5b9b9;
+        font-size:2rem;
+        margin-left:10px;
+    }    
 
     .hamburger {
         display: none;
@@ -197,11 +193,12 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         height: 300px;
         position: absolute;
         top: 100%;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px #007bff;
+        background-color: #ffffff5e;
+        /* box-shadow: 0px 0px 10px #007bff; */
         text-align: start;
         padding: 10px;
         border-radius: 4px;
+        border:1px solid #fff;
     }
 
     .DropDownMenu1 {
@@ -235,7 +232,10 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
 
 
     .dropDownMenu li:hover {
-        background-color: #f8f1f1;
+        background-color: #ffffff5e;
+    }
+    .dropDownMenu li:hover a{
+        color: rgba(15, 15, 15, 0.37)
     }
 
     .nav-icons {
@@ -555,8 +555,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
                         <ul class="DropDownMenu4 dropDownMenu">
                             <li><a href="<?php echo $base_url; ?>pages/contact.php">Contact Us</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/faqs.php">FAQs</a></li>
-                            <li><a href="<?php echo $base_url; ?>pages/Return_refund_policy.php">Return & Refound
-                                    Policy</a>
+                            <li><a href="<?php echo $base_url; ?>pages/Return_refund_policy.php">Return & Refound Policy</a>
                             </li>
                         </ul>
                     </li>

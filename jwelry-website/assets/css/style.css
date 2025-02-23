@@ -7,11 +7,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    position: relative;
 }
-
-
-/* hero section */
-
 
 /* NEw Collection */
 .new-collection-section {
@@ -22,8 +19,6 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
-
-
 .new-collection-section .new-collection-box {
     /* width: 250px;
     height: 200px; */
