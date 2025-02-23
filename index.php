@@ -93,8 +93,8 @@ include './jwelry-website/includes/header.php';
             </div>
         </div>
     </section>
-
-    <!-- Our costomer section -->
+  
+   <!-- Our costomer section -->
     <section class="our-customers">
         <div class="container mx-auto px-6">
             <h2>Our Happy Customers</h2>

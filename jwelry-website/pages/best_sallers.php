@@ -1,88 +1,105 @@
+<?php
+include '../includes/config.php';
+
+$conn = new mysqli("localhost", "root", "", "sinjhini_db");
+
+// Fetch best-selling products (most ordered)
+$result = $conn->query("
+    SELECT p.*, c.category_name, COUNT(oi.product_id) AS order_count
+    FROM products p
+    JOIN categories c ON p.category_id = c.category_id
+    JOIN order_items oi ON p.product_id = oi.product_id  -- FIXED: Using order_items table
+    GROUP BY p.product_id
+    ORDER BY order_count DESC
+    LIMIT 12
+");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!--  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+IN:wght@100..400&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/best_sales.css">
-    <!-- For AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Best Sellers - Jewelry</title>
-
+    <title>Best Sellers</title>
+    <style>
+      
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 10px;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 16px;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #e68900;
+        }
+    </style>
 </head>
-
 <body>
 <?php
-include '../includes/header.php'; 
+include '../includes/header.php';
 ?>
-
-    <h1>
-        <h1>Best Sellers</h1>
-    </h1>
-    <section id="best-sellers">
-        <div class="container">
-            <div id="jewelry-list" class="grid" data-aos="flip-left"></div>
-        </div>
-    </section>
-
+<div class="container">
+    <h2>🔥 Best Sellers</h2>
+    <p style="text-align: center; font-size: 16px; color: #555;">
+        Check out our most popular jewelry items that customers love the most!
+    </p>
+    <div class="grid">
+        <?php while ($row = $result->fetch_assoc()): ?>
+            <div class="product-card">
+                <img src="<?= str_replace('./', '/jwelery-website/admin/', $row['image_url']); ?>" alt="Best Seller">
+                <h3><?= $row['name']; ?></h3>
+                <p>Category: <?= $row['category_name']; ?></p>
+                <p>Orders: <?= $row['order_count']; ?></p>
+                <p>Price: ₹<?= number_format($row['price'], 2); ?></p>
+                <a href="productDetail.php?id=<?= $row['product_id']; ?>" class="btn">View Details</a>
+            </div>
+        <?php endwhile; ?>
+    </div>
+</div>
 <?php
-include '../includes/footer.php'; 
+include '../includes/footer.php';
 ?>
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const bestSellersData = [
-                { "image": "diamond_ring.jpg", "name": "Diamond Ring", "description": "Premium diamond ring with a luxury finish.", "price": "499" },
-                { "image": "gold_necklace.jpg", "name": "Silver Necklace", "description": "Classic gold necklace with an elegant touch.", "price": "599" },
-                { "image": "silver_earrings.jpg", "name": "Silver Earrings", "description": "Stylish silver earrings with a modern look.", "price": "199" }
-            ];
-
-            const jewelryList = document.getElementById("jewelry-list");
-            bestSellersData.forEach(item => {
-                const card = document.createElement("div");
-                card.classList.add("jewelry-card");
-                card.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}">
-                    <h2>${item.name}</h2>
-                    <p>${item.description}</p>
-                    <span>Price: $${item.price}</span>
-                    <button>Add to Cart</button>
-                `;
-                jewelryList.appendChild(card);
-            });
-        });
-
-
-
-        // For Search products
-        // Function to handle search when Enter is pressed
-        function handleSearch(event) {
-            if (event.key === "Enter") {
-                const searchQuery = document.getElementById("search-box").value.trim().toLowerCase();
-                if (searchQuery !== "") {
-                    window.location.href = `./search.php?query=${encodeURIComponent(searchQuery)}`;
-                }
-            }
-        }
-    </script>
 </body>
-<!-- For scroll animation -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<!-- Main JS -->
-<!-- <script src="../assets/js/script.js"></script> -->
-
 </html>

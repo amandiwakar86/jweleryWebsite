@@ -3,12 +3,12 @@ include '../includes/config.php';
 
 $conn = new mysqli("localhost", "root", "", "sinjhini_db");
 
-// Fetch all products that belong to the "Necklaces" category
+// Fetch all products that belong to the "Lady Bracelets" category
 $result = $conn->query("
     SELECT products.*, categories.category_name 
     FROM products 
     JOIN categories ON products.category_id = categories.category_id 
-    WHERE categories.category_name = 'Necklaces'
+    WHERE categories.category_name = 'Lady Bracelets'
 ");
 ?>
 
@@ -17,8 +17,9 @@ $result = $conn->query("
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Necklaces Collection</title>
+    <title>Lady Bracelets Collection</title>
     <style>
+      
         .container {
             max-width: 1000px;
             margin: auto;
@@ -76,11 +77,11 @@ $result = $conn->query("
 include '../includes/header.php';
 ?>
 <div class="container">
-    <h2>Necklaces Collection</h2>
+    <h2>Lady Bracelets Collection</h2>
     <div class="grid">
         <?php while ($row = $result->fetch_assoc()): ?>
             <div class="product-card">
-                <img src="<?= str_replace('./', '/jwelery-website/admin/', $row['image_url']); ?>" alt="Necklace">
+                <img src="<?= str_replace('./', '/jwelery-website/admin/', $row['image_url']); ?>" alt="Lady Bracelet">
                 <h3><?= $row['name']; ?></h3>
                 <p>Price: ₹<?= number_format($row['price'], 2); ?></p>
                 <p>Stock: <?= $row['stock_quantity']; ?> left</p>

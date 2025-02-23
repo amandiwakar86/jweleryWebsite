@@ -78,6 +78,9 @@ $conn->close();
             outline: none;
             transition: 0.3s;
         }
+        input{
+            margin-left:15px;
+        }
 
         .input-group input:focus, 
         .input-group select:focus, 

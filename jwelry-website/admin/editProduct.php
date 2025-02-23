@@ -35,6 +35,66 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    select, input[type="text"], input[type="number"], input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    img {
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        display: block;
+    }
+
+    button {
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
 <body>
     <h2>Edit Product</h2>
     <form method="POST" enctype="multipart/form-data" action="updateProduct.php">

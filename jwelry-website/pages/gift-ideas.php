@@ -3,12 +3,14 @@ include '../includes/config.php';
 
 $conn = new mysqli("localhost", "root", "", "sinjhini_db");
 
-// Fetch all products that belong to the "Necklaces" category
+// Fetch products suitable for gifting (you can filter by category or manually mark products as "gift ideas")
 $result = $conn->query("
-    SELECT products.*, categories.category_name 
-    FROM products 
-    JOIN categories ON products.category_id = categories.category_id 
-    WHERE categories.category_name = 'Necklaces'
+    SELECT p.*, c.category_name 
+    FROM products p
+    JOIN categories c ON p.category_id = c.category_id
+    WHERE c.category_name IN ('Rings', 'Bracelets', 'Necklaces', 'Earrings')
+    ORDER BY RAND() 
+    LIMIT 12
 ");
 ?>
 
@@ -17,7 +19,7 @@ $result = $conn->query("
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Necklaces Collection</title>
+    <title>Gift Ideas</title>
     <style>
         .container {
             max-width: 1000px;
@@ -60,14 +62,14 @@ $result = $conn->query("
         .btn {
             display: inline-block;
             padding: 8px 15px;
-            background: #007bff;
+            background: #ff9800;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 10px;
         }
         .btn:hover {
-            background: #0056b3;
+            background: #e68900;
         }
     </style>
 </head>
@@ -76,14 +78,17 @@ $result = $conn->query("
 include '../includes/header.php';
 ?>
 <div class="container">
-    <h2>Necklaces Collection</h2>
+    <h2>Perfect Gift Ideas 🎁</h2>
+    <p style="text-align: center; font-size: 16px; color: #555;">
+        Looking for the perfect gift? Explore our collection of beautiful rings, earrings, bracelets, and necklaces!
+    </p>
     <div class="grid">
         <?php while ($row = $result->fetch_assoc()): ?>
             <div class="product-card">
-                <img src="<?= str_replace('./', '/jwelery-website/admin/', $row['image_url']); ?>" alt="Necklace">
+                <img src="<?= str_replace('./', '/jwelery-website/admin/', $row['image_url']); ?>" alt="Gift Idea">
                 <h3><?= $row['name']; ?></h3>
+                <p>Category: <?= $row['category_name']; ?></p>
                 <p>Price: ₹<?= number_format($row['price'], 2); ?></p>
-                <p>Stock: <?= $row['stock_quantity']; ?> left</p>
                 <a href="productDetail.php?id=<?= $row['product_id']; ?>" class="btn">View Details</a>
             </div>
         <?php endwhile; ?>

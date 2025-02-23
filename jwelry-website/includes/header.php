@@ -531,23 +531,23 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
                 <ul class="menu">
                     <li class="menu-item dropdown"><a href="#">Shop</a>
                         <ul class="DropDownMenu1 dropDownMenu">
-                        <ul>
-    <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/rings.php">Rings</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/earrings.php">Bali & Earrings</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/bracelets.php">Anklet</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/baby.php">Baby</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/lady-bracelets.php">Lady Bracelets</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/necklaces.php">Necklaces</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/chains.php">Chains</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/toerings.php">Toe Rings</a></li>
-</ul>
+                            <ul>
+                                <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/rings.php">Rings</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/earrings.php">Bali & Earrings</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/anklit.php">Anklet</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/baby.php">Baby</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/lady-bracelets.php">Lady Bracelets</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/neckllaces.php">Necklaces</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/chains.php">Chains</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/toe-rings.php">Toe Rings</a></li>
+                            </ul>
 
                         </ul>
                     </li>
                     <li class="menu-item dropdown"><a href="#">Collections</a>
                         <ul class="DropDownMenu2 dropDownMenu">
-                            <li><a href="<?php echo $base_url; ?>pages/new_arriables.php">New Arrivals</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/new-arrivals.php">New Arrivals</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/best_sallers.php">Best Sallers</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/gift_ideas.php">Gift Ideas</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/sessonal_fabourite.php">Seasonal Fabourite</a>
@@ -577,24 +577,23 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
                 <ul class="menu">
                     <li class="menu-item dropdown"><a href="#">Shop <i class="fa-regular fa-greater-than"></i></a>
                         <ul class="DropDownMenu1 dropDownMenu">
-                        <ul>
-    <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/rings.php">Rings</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/earrings.php">Bali & Earrings</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/bracelets.php">Anklet</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/baby.php">Baby</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/lady-bracelets.php">Lady Bracelets</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/necklaces.php">Necklaces</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/chains.php">Chains</a></li>
-    <li><a href="<?php echo $base_url; ?>pages/toerings.php">Toe Rings</a></li>
-</ul>
-
+                            <ul>
+                                <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/rings.php">Rings</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/earrings.php">Bali & Earrings</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/anklit.php">Anklet</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/baby.php">Baby</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/ladyBraclets.php">Lady Bracelets</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/neckllaces.php">Necklaces</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/chains.php">Chains</a></li>
+                                <li><a href="<?php echo $base_url; ?>pages/toe-rings.php">Toe Rings</a></li>
+                            </ul>
                         </ul>
                     </li>
                     <li class="menu-item dropdown"><a href="#">Collections <i
                                 class="fa-regular fa-greater-than"></i></a>
                         <ul class="DropDownMenu2 dropDownMenu">
-                            <li><a href="<?php echo $base_url; ?>pages/new_arriables.php">New Arrivals</a></li>
+                            <li><a href="<?php echo $base_url; ?>pages/new-arrivals.php">New Arrivals</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/best_sallers.php">Best Sallers</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/gift_ideas.php">Gift Ideas</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/sessonal_fabourite.php">Seasonal Fabourite</a>
