@@ -10,6 +10,11 @@ $result = $conn->query("
     JOIN categories ON products.category_id = categories.category_id 
     WHERE categories.category_name = 'Bali & Earrings'
 ");
+
+// Dynamically get the base URL
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$baseUrl = $protocol . $host . "/jweleryWebsite/jwelry-website/admin/";
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +86,7 @@ include '../includes/header.php';
     <div class="grid">
         <?php while ($row = $result->fetch_assoc()): ?>
             <div class="product-card">
-                <img src="<?= str_replace('./', '/jwelery-website/admin/', $row['image_url']); ?>" alt="Earring Image">
+                <img src="<?= $baseUrl . $row['image_url']; ?>" alt="Earring Image">
                 <h3><?= $row['name']; ?></h3>
                 <p>Price: ₹<?= number_format($row['price'], 2); ?></p>
                 <p>Stock: <?= $row['stock_quantity']; ?> left</p>
@@ -92,6 +97,6 @@ include '../includes/header.php';
 </div>
 <?php
 include '../includes/footer.php';
-?>
+?> 
 </body>
 </html>
