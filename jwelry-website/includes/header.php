@@ -468,7 +468,8 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             Sparkle & Save! Extra 10% OFF on Prepaid Orders - Use Code: SILVER10
         </marquee>
         <div class="navbar">
-            <div class="logo">Sinjhini.com</div>
+            <a href="../../index.php" class="logo">SINJHINI</a>
+            <!-- <div class="logo">SINJHINI</div> -->
             <!-- <div class="logo"><img src="./jwelry-website/assets/images/logo.jpg" alt="Logo"></div> -->
             <div class="phone-menu" id="menu">
                 <ul class="menu">

@@ -218,7 +218,7 @@ include './jwelry-website/includes/header.php';
 
         <div class="hero-content">
             <h1>Discover Timeless Elegance</h1>
-            <p>Handcrafted Silver Jewelry for Every Occasion</p>
+            <p>Handcrafted Silver jewellery for Every Occasion</p>
             <div class="searchBar">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" id="search-box" placeholder="Search for products..." onkeypress="handleSearch(event)">
